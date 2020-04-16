@@ -45,12 +45,12 @@ class App extends React.Component {
    for(let value in itemsA){
      console.log("clara");
      console.log(itemsA[value].text);
-     if(itemsA[value].text == newItem.text){
+     if(itemsA[value].text === newItem.text){
        alert("Don't input duplicate values")
        duplicate = 1;
      }
    }
-   if(newItem.text !== "" && duplicate == 0){
+   if(newItem.text !== "" && duplicate === 0){
      const newItems = [...this.state.items, newItem];
      this.setState({
        items:newItems,
